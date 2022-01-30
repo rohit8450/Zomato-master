@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #fbfbfb;
+}
+
+h1,h2,h3,h4,h5{
+  margin: 0;
+}
+
+/*header-listing styling*/
+
+.search-content {
+  width: 90%;
+  min-height: 120vh;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.search-text {
+  color: #192f60;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.filter-search-sec {
+  width: 95%;
+  min-height: 90%;
+  margin-top: 2.5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-sec-box {
+  display: none;
+}
+
+.filter-sec {
+  width: 25%;
+  min-height: 500px;
+  max-height: 975px;
+  padding: 24px 20px 30px 30px;
+  color: #192f60;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25), 0px -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-results {
+  width: 72%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.search-box ,.search-box-no{
+  width: 100%;
+  min-height: 320px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16), 0px -1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 8px 8px rgba(221, 216, 216, 1);
+  
+}
+
+.search-box-no{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-result1 {
+  margin-bottom: 3.5%;
+}
+
+.filter-text {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.select-loc-text {
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.location-listing {
+  width: 90%;
+  height: 40px;
+  border: 1px solid #636f88;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+#location-listing-search {
+  width: 98%;
+  height: 35px;
+  margin-left: 3px;
+  font-size: 13px;
+  outline: none;
+  background-color: #ffffff;
+  border: none;
+  color: #8c96ab;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 350ms ease-in;
+  padding: 0 5px;
+  padding-top: 5px;
+}
+
+.food-con-type {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.food-con-type label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  color: #8c96ab;
+  font-size: 18px;
+}
+
+.food-con-type input[type="checkbox"] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.food-con-type label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #192f60;
+  margin-right: 11px;
+  margin-top: 3px;
+  transition: 200ms;
+}
+
+.food-con-type input[type="checkbox"]:checked + label::before {
+  background-color: #3a5075;
+}
+
+.food-con-type input[type="checkbox"]:checked + label::before {
+  content: "\002714";
+  font-size: 15px;
+  font-weight: 400;
+  color: #fafbfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cost,
+.sort {
+  margin-bottom: 8px;
+}
+.cost input[type="radio"],
+.sort input[type="radio"] {
+  display: none;
+}
+
+.cost label,
+.sort label {
+  font-size: 18px;
+}
+
+.cost label::before,
+.sort label::before {
+  margin-right: 11px;
+}
+
+.cost input[type="radio"] + label,
+.sort input[type="radio"] + label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 32px;
+  display: inline-block;
+  color: #8c96ab;
+}
+
+.cost input[type="radio"] + label::before,
+.sort input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border: 2px solid#3a5075;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  transition: 200ms;
+}
+
+.cost input[type="radio"]:checked + label::before,
+.sort input[type="radio"]:checked + label::before {
+  box-shadow: inset 0 0 0 0.1rem #fff, inset 0 0 0 32px #3a5075;
+}
+.cuisine {
+  margin-top: 25px;
+}
+
+.cuisine-text,
+.cost-for-two-text,
+.sort-text {
+  font-size: 20px;
+  margin-bottom: 11px;
+}
+.cost {
+  margin-bottom: 5px;
+}
+
+.cost-for-two,
+.sort {
+  margin-top: 20px;
+}
+
+.sort-radio {
+  margin-bottom: 5px;
+  color: #8c96ab;
+}
+
+.search-main-box {
+  width: 90%;
+  height: 65%;
+  margin-left: 19px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-food-desc {
+  width: 90%;
+  height: 35%;
+  padding-top: 16px;
+  margin: auto;
+  margin-top: 0;
+  color: #636f88;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-top: 1px solid #dedfe5;
+}
+
+.food-img-listing {
+  width: 22%;
+  height: 74%;
+  border-radius: 20%;
+  background-size: cover;
+  background-position: center center;
+  min-width: 150px;
+}
+
+.food-hotel {
+  width: 70%;
+  height: 75%;
+  color: #192f60;
+  padding-top: 16px;
+}
+
+.hotel-name {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.fort {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.address {
+  color: #636f88;
+  font-size: 18px;
+}
+
+.cuisines {
+  width: 90%;
+  height: 50%;
+  margin-left: 0;
+  padding: 10px 18px;
+  margin-top: 0px;
+  display: flex;
+}
+
+.cuisines-text,
+.cost-for-two-per-text {
+  display: inline-block;
+  font-size: 20px;
+}
+.cuisines-val,
+.cost-val {
+  display: inline-block;
+  right: 0px;
+  margin-left: 90px;
+  color: #192f60;
+  font-size: 20px;
+}
+
+.cuisines-val{
+  display: flex;
+  gap: 1rem;
+}
+
+.cuisines-val h4{
+  font-weight: 500;
+}
+
+.cost-val {
+  margin-left: 50px;
+}
+
+.cost-for-two-per {
+  width: 300px;
+  height: 50%;
+  padding: 0 18px;
+  margin-bottom: 20px;
+}
+
+.loader {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filters-sort {
+  display: none;
+  width: 98%;
+  height: 50px;
+  padding-left: 15px;
+  padding-top: 12px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  color: var(--dark-blue);
+  background-color: var(--gunmetal);
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.filters-sort h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sub-arrow {
+  color: var(--dark-blue);
+  font-size: 20px;
+  position: absolute;
+  left: 82vw;
+  bottom: 14px;
+  transition: 200ms ease-in-out;
+}
+
+@media screen and (max-width: 1200px) {
+  .search-content {
+    width: 95%;
+  }
+  .filter-search-sec {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .filter-sec {
+    width: 30%;
+  }
+  .search-results {
+    width: 66%;
+  }
+
+  .search-main-box {
+    width: 98%;
+    gap: 20px;
+    padding-right: 30px;
+  }
+
+  .hotel-name {
+    font-size: 25px;
+  }
+
+  .fort {
+    font-size: 18px;
+  }
+
+  .address {
+    font-size: 16px;
+  }
+
+  .cuisines-text,
+  .cuisines-val,
+  .cost-for-two-per-text,
+  .cost-val {
+    font-size: 18px;
+  }
+
+  .search-text {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-text {
+    margin-bottom: 16px;
+  }
+  .filter-sec {
+    display: none;
+  }
+
+  .filters-sort {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .search-results {
+    width: 98%;
+  }
+
+  .search-box {
+    min-height: 320px;
+  }
+
+  .search-main-box {
+    align-items: flex-start;
+    padding-top: 24px;
+  }
+
+  .food-hotel {
+    padding-top: 0px;
+  }
+
+  .food-img-listing {
+    min-width: 120px;
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .search-text {
+    font-size: 28px;
+  }
+  .food-img-listing {
+    min-width: 110px;
+    height: 110px;
+  }
+
+  .hotel-name {
+    font-size: 22px;
+  }
+  .cuisines-text,
+  .cuisines-val,
+  .cost-for-two-per-text,
+  .cost-val {
+    font-size: 16px;
+  }
+
+  .search-food-desc {
+    margin-top: 7px;
+  }
+}
+
+.filter-active {
+  display: block;
+  position: absolute;
+  top: 260px;
+  width: 94%;
+  background-color: white;
+  z-index: 100;
+}
+
+.sub-arrow-active {
+  transform: rotate(180deg);
+}

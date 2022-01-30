@@ -1,0 +1,283 @@
+:root {
+  --dark-blue: #192f60;
+  --dark-red: #ce0505;
+  --light-grey: #d2d9e6;
+  --light-blue: #636f88;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.restaurant-details {
+  min-height: 130vh;
+  width: 90%;
+  margin: 60px auto;
+}
+
+.restaurant-img {
+  width: 100%;
+  min-height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.img-gallery-btn {
+  position: absolute;
+  right: 100px;
+  bottom: 80px;
+  border: none;
+  width: 242px;
+  height: 48px;
+  padding: 13px 13px 12px 16px;
+  opacity: 0.8;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.restaurant-name {
+  color: var(--dark-blue);
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.navigation {
+  margin-top: 30px;
+  position: relative;
+}
+
+.nav-name {
+  color: var(--dark-blue);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.overview-box,
+.contact-box {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.about-name {
+  color: var(--dark-blue);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cuisine-box,
+.avg-box,
+.res-address {
+  margin-top: 30px;
+}
+
+.cuisine-text,
+.avg-text {
+  color: var(--dark-blue);
+  font-size: 18px;
+}
+
+.cuisine-info h4,
+.avg-info h4 {
+  color: var(--dark-blue);
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.cuisine-info h4 {
+  margin-top: -4px;
+  display: flex;
+  gap: 10px;
+}
+
+.place-order-btn {
+  position: absolute;
+  right: 30px;
+  top: -5px;
+  background-color: var(--dark-red);
+  border: none;
+  padding: 13px 23px 12px 32px;
+  color: white;
+  font: inherit;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.phone-nob-text {
+  color: var(--dark-blue);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.act-phone-no,
+.act-phone-no {
+  color: var(--dark-red);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.res-address {
+  margin-top: 50px;
+}
+
+.rest-name {
+  color: var(--dark-blue);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.rest-address {
+  width: 40%;
+  color: var(--light-blue);
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.back {
+  position: absolute;
+  left: 30px;
+  top: 14vh;
+  background-color: var(--dark-red);
+  border: none;
+  padding: 5px 25px;
+  color: white;
+  font: inherit;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.place-order-btn:hover,
+.back:hover {
+  background-color: rgba(206, 5, 5, 0.8);
+}
+
+.image-gallery-active {
+  display: block;
+}
+
+.image-gallery-hide {
+  display: none;
+}
+
+.images-box {
+  width: 80%;
+  height: 80%;
+  z-index: 10;
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-gal{
+  width: 100%;
+  min-height: 75vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.img-gal img{
+  width: 90%;
+  height: 70vh;
+  object-fit: cover;
+  margin-inline: auto;
+  border-radius: 2rem;
+}
+
+.image-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.image-cross {
+  position: absolute;
+  left: 90vw;
+  top: 6vh;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+@media screen and (max-width: 660px) {
+  .back {
+    font-size: 16px;
+  }
+  .img-gallery-btn {
+    font-size: 14px;
+  }
+
+  .restaurant-name {
+    font-size: 30px;
+    margin-bottom: 85px;
+  }
+
+  .nav-name {
+    font-size: 18px;
+  }
+
+  .about-name {
+    font-size: 20px;
+  }
+  .cuisine-text,
+  .avg-text {
+    font-size: 16px;
+  }
+  .cuisine-info h4,
+  .avg-info h4 {
+    font-size: 16px;
+  }
+  .phone-nob-text,
+  .act-phone-no {
+    font-size: 18px;
+  }
+
+  .place-order-btn {
+    font-size: 16px;
+    right: -15px;
+    top: -50px;
+    padding: 10px 15px 10px 25px;
+  }
+
+  .rest-address {
+    width: 60%;
+  }
+}
+
+.prev-gal, .next-gal{
+  font-size: 50px;
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+}
+
+.prev-gal{
+  left: -7%;
+}
+
+.next-gal{
+  right: -5%;
+}
+
+.slick-prev {
+    left: -69px;
+}

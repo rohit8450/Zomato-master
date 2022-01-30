@@ -1,0 +1,106 @@
+.form_wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image:
+    url("https://i.ibb.co/CBWKh6H/pexels-chan-walrus-941861.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form_container,.login-form_container {
+  width: 500px;
+  min-height: 70vh;
+  background-color: white;
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1.6rem;
+  position: relative;
+}
+
+.login-form_container{
+  min-height: 90vh;
+  margin-left: 12rem;
+}
+
+.title_container{
+  text-align: center;
+  font-size: 30px;
+  margin: 1rem;
+}
+
+
+.input-field{
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-field input[type="text"],.input-field input[type="password"] {
+  height: 40px;
+  color: var(--light-blue);
+  font: inherit;
+  font-size: 14px;
+  padding: 0.7rem;
+}
+
+.field{
+  color : var(--dark-blue);
+  font-size: 16px;
+}
+
+.btns{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.register{
+  width: 80%;
+  height: 50px;
+  border: none;
+  border-radius: 2rem;
+  background-color: #244aed;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  transition: background 100ms ease-in-out;
+}
+
+.register:hover{
+  background-color: rgba(36, 74, 237,0.945);
+}
+
+.msg{
+  width: 500px;
+  height: 55px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border-radius: 5px;
+}
+
+@media screen and (max-width : 850px) {
+  .login-form_container{
+    margin-left: 0;
+  }
+
+  .form_wrapper{
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .login-form_container {
+    width: 90%;
+  }
+}

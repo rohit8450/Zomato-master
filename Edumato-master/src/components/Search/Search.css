@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+/*Header styling*/
+
+#header {
+  min-height: 70vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(157, 14, 14, 0),
+      hsl(0, 84%, 17%, 0.7)
+    ),
+    url("https://i.ibb.co/gJbF4yH/food-wallpaper.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+.login-acc {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.6rem;
+  padding-right: 2rem;
+}
+
+#login {
+  display: inline-block;
+}
+
+#login a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+#create-account {
+  display: inline-block;
+}
+
+#acc-btn {
+  outline: none;
+  font-family: "Poppins";
+  background-color: transparent;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #ffff;
+  color: #ffffff;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.logo-circle {
+  height: 147px;
+  width: 147px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 2.5%;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eb2929;
+  font-weight: 600;
+  font-size: 70px;
+}
+
+.header-heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 30px;
+  padding-inline: 20px;
+  color: white;
+}
+
+.box {
+  outline: none;
+  background-color: #ffffff;
+  border: none;
+  color: #636f88;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: 350ms ease-in;
+}
+
+.loc-res-box {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-inline: 30px;
+}
+
+.location {
+  width: 380px;
+}
+
+.restaurants {
+  width: 500px;
+  position: relative;
+}
+
+#location-search {
+  width: 100%;
+  padding: 16px;
+}
+
+#restaurants-search {
+  width: 100%;
+  padding: 16px;
+}
+
+.restaurant-div {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 60px;
+  color: #192f60;
+  z-index: 10;
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.3);
+  display: none;
+
+}
+
+.resbox {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+  cursor: pointer;
+  transition: box-shadow 350ms ease-in-out;
+}
+
+.resbox:hover {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.res-info {
+  width: 80%;
+}
+
+.resname {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.resadd {
+  color: #8c96ab;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 975px) {
+  .header {
+    min-height: 80vh;
+  }
+
+  .loc-res-box {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 40px;
+  }
+
+  .location {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-circle {
+    height: 120px;
+    width: 120px;
+  }
+
+  .logo {
+    font-size: 58px;
+  }
+
+  .header-heading {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #login a,
+  #acc-btn {
+    font-size: 16px;
+  }
+  .location,
+  .restaurants {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .logo-circle {
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+  }
+  .location,
+  .restaurants {
+    width: 300px;
+  }
+}
+
+
+.showres{
+  display: block;
+}
+
+.hideres{
+  display: none;
+}
